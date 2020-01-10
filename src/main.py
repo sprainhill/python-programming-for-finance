@@ -13,4 +13,6 @@ end = dt.datetime(2016,12,31)
 df = web.DataReader('TSLA', 'yahoo', start, end)
 
 print(df.head(10))
-print(df.tail(10))
+# print(df.tail(10))
+
+df.to_csv('tsla.csv')
