@@ -19,7 +19,7 @@ style.use('ggplot')
 # read in a csv
 df = pd.read_csv('tsla.csv', parse_dates = True, index_col = 0)
 
-# df['100ma'] = df['Adj Close'].rolling(window=100, min_periods=0).mean()
+df['100ma'] = df['Adj Close'].rolling(window=100, min_periods=0).mean()
 
 # create new frame
 # open high low close
@@ -31,7 +31,7 @@ df_ohlc.reset_index(inplace=True)
 # map dates to format
 df_ohlc['Date'] = df_ohlc['Date'].map(mdates.date2num)
 
-# print(df_ohlc.head())
+print(df_ohlc.head())
 
 
 # graph with matplotlib

@@ -24,4 +24,4 @@ df = pd.read_csv('tsla.csv', parse_dates = True, index_col = 0)
 # print(df.head(10))
 
 df.plot()
-plt.show
+plt.show()
